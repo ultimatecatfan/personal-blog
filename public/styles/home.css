@@ -1,0 +1,21 @@
+
+.recent-posts > h1{
+    font-size:30pt; 
+    font-weight:bold;
+    margin-bottom:2rem;
+    margin-top: auto;
+
+}
+
+.blog-post-img{
+    height:auto;
+    width:50%;
+    float:left;
+    margin-right:5%;
+}
+.blog-post.container{
+    height:80%;
+    width:100%;
+    margin-bottom: 1rem;
+    
+}

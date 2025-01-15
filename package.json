@@ -1,0 +1,16 @@
+{
+  "name": "web-dev-bootcamp-blog",
+  "version": "1.0.0",
+  "description": "Simple blog application for Web development bootcamp course.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charlee",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
+  }
+}
