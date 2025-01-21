@@ -1,0 +1,7 @@
+footer{
+    background: rgb(174,237,238);
+    background: radial-gradient(circle, rgba(174,237,238,1) 0%, rgba(148,178,233,1) 100%);
+}
+.footer-icons{
+    padding-right:2rem;
+}

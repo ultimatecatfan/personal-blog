@@ -9,13 +9,16 @@
 
 .blog-post-img{
     height:auto;
-    width:50%;
+    width:100%;
     float:left;
     margin-right:5%;
+    margin-bottom: 1rem;
 }
 .blog-post.container{
-    height:80%;
-    width:100%;
-    margin-bottom: 1rem;
+    display:flex;
+    flex-direction:column;
+    margin-bottom: 2rem;
+    justify-content: center;
+    line-height: 20pt;
     
 }

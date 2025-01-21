@@ -4,6 +4,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link href = "/styles/header.css" rel = 'stylesheet'></link>
         <link href = "/styles/home.css" rel = 'stylesheet'></link>
+        <link href = "/styles/footer.css" rel = 'stylesheet'></link>
     </head>
     <body>
         <%- include('partials/header.html') %>
@@ -78,9 +79,9 @@
                         <p class="blog-post-meta"><%= post.postDate %></p>
                         <% if (post.image !== "None") {%>
                             <% let link = `/images/${post.image}.jpg`; %>
-                            <img class = "blog-post-img" src = <%=link%>></img>
+                            <img class = "blog-post-img" src = <%=link%> alt=<%=post.image%>></img>
                         <%} %>
-                        <p class = "blog-post-body"><%= post.body %></p>
+                        <p class = "blog-post-body"><%- post.body %></p>
                     </div>
                 <%}) %>
             <%} %>
@@ -88,10 +89,9 @@
             
         </div>
 
-        <!--more posts-->
-        <div class = 'container'>
-            <button type="button" class="btn btn-primary">More Posts</button>
-        </div>
+        <%- include("partials/footer.html") %>
+
+        
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 

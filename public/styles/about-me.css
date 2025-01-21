@@ -1,0 +1,28 @@
+.row.featurette{
+    display:flex;
+    width:80%;
+    height:50%;
+
+}
+.featurette-text{
+    margin-top:40%;
+    color:#123499;
+}
+
+.container.featurette{
+    margin-bottom:20%;
+    margin-top:10%;
+}
+.featurette-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+
+}
+
+.featurette-image > img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover; 
+}
