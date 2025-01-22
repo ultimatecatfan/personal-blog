@@ -26,3 +26,21 @@
     height: auto;
     object-fit: cover; 
 }
+
+.description, .blockquote{
+    margin-top: 10%;
+
+}
+
+.description{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items:center;
+    line-height:30pt;
+}
+.description-title{
+    font-family: "Playfair Display", serif;
+    font-weight:bold;
+
+}

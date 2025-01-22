@@ -5,11 +5,13 @@
         <link href = '/styles/about-me.css' rel = 'stylesheet'></link>
         <link href = "/styles/header.css" rel = 'stylesheet'></link>
         <link href = "/styles/footer.css" rel = 'stylesheet'></link>
+
     </head>
 
 
 
     <body>
+
         <%-include("partials/header.html")%>
 
         <div class = 'container featurette'>
@@ -25,9 +27,19 @@
         </div>
 
         <blockquote class="blockquote text-center">
-          <p class="mb-0"></p>
-          <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+          <p class="mb-4">Not everything that is faced can be changed; but nothing can be changed until it is faced.</p>
+          <footer class="blockquote-footer">James Baldwin<cite title="Source Title"> ,essay for the New York Times</cite></footer>
         </blockquote>
+        <div class = 'container'>
+        <div class = 'description'>
+          <h2 class = 'description-title'>
+            About Me
+          </h2>
+          <p class = 'description-body'>
+            <%=description.body%> 
+          </p>
+        </div>
+      </div>
 
         <%-include("partials/footer.html")%>
     </body>

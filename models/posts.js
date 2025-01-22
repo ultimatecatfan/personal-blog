@@ -45,6 +45,7 @@ async function addPosts(newPost){
     let existing = await Post.findOne({title:newPost.title});
     if (existing){
         console.log("The post already exists!");
+        
     }
     else{
         newPost.save().then(()=>{
@@ -61,7 +62,7 @@ posts.forEach(newPost=>{
     addPosts(newPost);
 })
             
-export {main,Post};
+export {main,Post,mongoose};
     
 
 
