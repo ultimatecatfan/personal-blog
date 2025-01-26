@@ -1,0 +1,29 @@
+.error-message > *{
+    font-family: "Teko", serif;
+}
+
+.error-message{
+    height: 80%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.error-no-post{
+    color:lightslategray;
+
+}
+.try-again{
+    color:#a0acb8;
+}
+
+error-message > *{
+    font-family: "Teko", serif;
+}
+
+h1{
+    color:lightslategray;
+
+}
+h2{
+    color:#a0acb8;
+}

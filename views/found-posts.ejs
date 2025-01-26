@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link href = "/styles/header.css" rel = 'stylesheet'></link>
+    <link href = "/styles/footer.css" rel = 'stylesheet'></link>
+    <link href = '/styles/all-posts.css' rel = 'stylesheet'></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Found Posts</title>
+</head>
+
+<body>
+    <%- include('./partials/header.html') %>
+    <div class = 'found-posts container'>
+        <% if (locals.length > 1) { %>
+            <h2 style = "font-family: 'Playfair Display', serif; margin-top: 5%;">Found <%=length%> posts that you might be interested in.</h2>
+        <%} else { %>
+            <h2 style = "font-family: 'Playfair Display', serif; margin-top: 5%;">Found <%=length%> post that you might be interested in.</h2>
+        <%} %>
+        <div class = 'all-posts' style = 'margin-top: 5% !important; height: 70%; justify-content:space-between;'>
+            <% if (locals.posts) {%>
+                <% posts.forEach(post => { %>
+                    <div class="blog-post-snippet">
+                    <h2 class = 'blog-post-title'><%=post.title%></h2>
+                    <h3 class = 'blog-post-date'>Posted On: <%=post.date%></h3>
+                    <% let fullLink = `/${post.slug}` %>
+                    <a class = 'link-full-post' href = <%=fullLink%>>Read More...</a>
+                    </div>
+                <%}) %>
+            <%} %>
+        </div>
+    </div>
+    <%- include('./partials/footer.html') %>
+</body>
+</html>

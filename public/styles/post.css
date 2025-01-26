@@ -1,9 +1,7 @@
+.container.blog-post{
+    margin-top: 5%;
+    margin-bottom:5%;
 
-.recent-posts > h1{
-    font-size:30pt; 
-    margin-bottom:2rem;
-    margin-top: auto;
-    font-family: "Playfair Display",serif;
 }
 
 .blog-post-img{

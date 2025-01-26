@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>All Posts</title>
+        <link href = "/styles/header.css" rel = 'stylesheet'></link>
+        <link href = "/styles/footer.css" rel = 'stylesheet'></link>
+        <link href = "/styles/all-posts.css" rel = 'stylesheet'></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <%- include('./partials/header.html') %>
+        <div class = 'container all-cards'>
+            <div class="card life-updates" style="width: 18rem;">
+                <img class="card-img-top" src="/images/nature-aesthetic.jpg" alt="Picture of nature">
+                <div class="card-body">
+                  <h5 class="card-title">Life Updates</h5>
+                  <p class="card-text">Tracking my daily musings and everyday life, from the mundane to the extraordinary. Expect cats and nature photos.</p>
+                </div>
+              </div>
+              <div class="card study-updates" style="width: 18rem;">
+                <img class="card-img-top" src="/images/studying-aesthetic.jpg" alt="Deep in study">
+                <div class="card-body">
+                  <h5 class="card-title">School Life</h5>
+                  <p class="card-text">Posts about my life in University: modules, new skills I'm learning, and notable events.</p>
+                </div>
+              </div>
+              <div class="card study-updates" style="width: 18rem;">
+                <img class="card-img-top" src="/images/books-aesthetic.jpg" alt="Books">
+                <div class="card-body">
+                  <h5 class="card-title">Recent reads</h5>
+                  <p class="card-text">Book reviews, recommendations, and critical analyses.</p>
+                </div>
+              </div>
+
+        </div>
+        <div class = 'all-posts container'>
+            <% if (locals.posts) {%>
+                <% posts.forEach(post => { %>
+                    <div class="blog-post-snippet">
+                      <h2 class = 'blog-post-title'><%=post.title%></h2>
+                      <h3 class = 'blog-post-date'>Posted On: <%=post.date%></h3>
+                      <% let fullLink = `/${post.slug}` %>
+                      <a class = 'link-full-post' href = <%=fullLink%>>Read More...</a>
+                    </div>
+                <%}) %>
+            <%} %>
+        </div>
+
+        <%- include('./partials/footer.html') %>
+    </body>
+</html>

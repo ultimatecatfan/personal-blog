@@ -1,0 +1,30 @@
+.all-posts{
+    display:flex;
+    flex-direction:column;
+    margin-top: 10%;
+}
+.all-cards{
+    display:flex;
+    align-items: center;
+    gap: 10%;
+    margin-top: 10%;
+
+}
+.card-image-top{
+    height: 60%;
+}
+
+.link-full-post{
+    text-decoration: none;
+    color:lightslategray;
+}
+
+
+.blog-post-title{
+    font-family: "Playfair Display", serif;
+
+}
+.blog-post-date{
+    font-size:15pt;
+    color:lightslategray;
+}
