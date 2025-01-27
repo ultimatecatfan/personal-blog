@@ -2,10 +2,34 @@ import express from "express";
 import {main,Post} from './models/posts.js';
 import {aboutInfo} from './models/about-info.js';
 import bodyParser from 'body-parser';
+import 'dotenv/config';
+
+async function startServer(){
+    try{
+        await main();
+
+    }
+    catch(err){
+        console.err(`Error in starting server: ${err}`);
+    }
+}
+
+startServer();
+
+var app = express();
+        const port = 3000;
+        app.use(express.static('public'));
+        app.use(bodyParser.urlencoded({extended:true}));
 
 
-
-main();
+app.listen(port,(err)=>{
+    if (err){
+        console.log(err);
+    }
+    else{
+        console.log(`Server started on port ${port}`);
+    }
+})
 
 async function getPosts(){
     try{
@@ -18,10 +42,8 @@ async function getPosts(){
     }
 }
 
-var app = express();
-const port = 3000;
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended:true}));
+
+
 
 async function getDescription(){ //function to get the aboutinfo 
     try{
@@ -131,11 +153,3 @@ app.post('/search',async(req,res)=>{
 
 })
 
-app.listen(port,(err)=>{
-    if (err){
-        console.log(err);
-    }
-    else{
-        console.log(`Server started on port ${port}`);
-    }
-})
