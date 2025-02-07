@@ -20,7 +20,10 @@ const Post = mongoose.model('Post',postShema);
 async function main(){
     console.log(`The url is: ${url}`);
     try {
-        await mongoose.connect(url); //database connection string
+        await mongoose.connect(url,{useNewUrlParser: true,
+        useUnifiedTopology: true,
+        connectTimeoutMS: 10000,  
+        socketTimeoutMS: 45000,}); 
         console.log("successful connection to mongoDB");
     }
     catch (error){
