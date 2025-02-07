@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 import 'dotenv/config';
 
-const url = process.env.DB_URL;
+//const url = process.env.DB_URL;
+const url = process.env.MONGO_URI;
+
 let posts = [];
 
 const postShema = new mongoose.Schema({
